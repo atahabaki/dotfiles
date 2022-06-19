@@ -35,3 +35,11 @@ if [ -e "$(which exa)" ]; then
         alias sl="sudo exa -alih"
 fi
 
+#
+# bat/cat
+#
+if [ -e "$(which bat)" ]; then
+  alias r=bat
+elif [ -e "$(which cat)" ]; then
+  alias r=cat
+fi
