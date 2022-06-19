@@ -4,7 +4,7 @@ which which
 if [ $? -eq 0 ]; then
   alias w=which
 else
-  echo -e "[ERR] couldn't set aliases"
+  log_err "Couldn't set aliases!.."
   exit -1
 fi
 
