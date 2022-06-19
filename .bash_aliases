@@ -65,3 +65,19 @@ elif [ -e "$(which apt)" ]; then
   alias pup='sudo apt update && sudo apt dist-upgrade'
   alias pin='sudo apt install'
 fi
+
+#
+# yay
+#
+if [ -e "$(which yay)" ]; then
+  alias yup='yay -Syu'
+  alias yin='yay -S'
+  alias yfnd='yay -Ss'
+  alias yfl='yay -F'
+  alias yfly='yay -Fyy'
+  alias yfltr='yay -Qs'
+  alias yrm='yay -R'
+  alias yrmx='yay -Rns $(yay -Qtdq)'
+  alias yc='yay -Sc'
+  alias ycx='yay -Scc'
+fi
