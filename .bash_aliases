@@ -120,3 +120,8 @@ if [ -e "$(which clear)" ]; then
   alias c.=clear
   alias cls=clear
 fi
+
+###===============###
+##  MISCELLANEOUS  ##
+###===============###
+alias c=cd
