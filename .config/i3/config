@@ -244,10 +244,6 @@ for_window [class="firefoxdeveloperedition"] move container to workspace $ws2
 for_window [class="firefox"] move container to workspace $ws2
 for_window [class="Vimb"] move container to workspace $ws2
 
-for_window [class="konsole"] move container to workspace $ws3; layout tabbed
-for_window [class="st-256color"] move container to workspace $ws3; layout tabbed
-for_window [class="Alacritty"] move container to workspace $ws3; layout tabbed
-
 for_window [class="jetbrains-studio"] move container to workspace $ws4
 for_window [class="Code"] move container to workspace $ws4, fullscreen enable
 for_window [class="VSCodium"] move container to workspace $ws4, fullscreen enable
