@@ -121,6 +121,16 @@ if [ -e "$(which clear)" ]; then
   alias cls=clear
 fi
 
+#
+# rg/grep
+#
+if [ -e "$(which rg)" ]; then
+  alias grep=rg
+elif [ -e "$(which grep)" ]; then
+  alias grep='grep --color=auto'
+  alias gr=grep
+fi
+
 ###===============###
 ##  MISCELLANEOUS  ##
 ###===============###
