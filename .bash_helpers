@@ -19,11 +19,7 @@ CYB='\033[93;1m'
 # @arg0 msg: <T>: which can be displayed by echo
 #
 log_ok() {
-  if [ $# -eq 1 ]; then
-    echo -e "${CGB}[OK!]${C0} $1"
-  else
-    echo -e "${CGB}[OK!]${C0} Done!.."
-  fi
+  echo -e "${CGB}[OK!]${C0} ${1:-Done}"
 }
 
 # 
@@ -31,11 +27,7 @@ log_ok() {
 # @arg0 msg: <T>: which can be displayed by echo
 #
 log_wrn() {
-  if [ $# -eq 1 ]; then
-    echo -e "${CYB}[WRN]${C0} $1"
-  else
-    echo -e "${CYB}[WRN]${C0} Something interesting happening!.."
-  fi
+  echo -e "${CYB}[WRN]${C0} ${1:-Something interesting happening!..}"
 }
 
 # 
@@ -43,11 +35,7 @@ log_wrn() {
 # @arg0 msg: <T>: which can be displayed by echo
 #
 log_err() {
-  if [ $# -eq 1 ]; then
-    >&2 echo -e "${CRB}[ERR]${C0} $1"
-  else
-    >&2 echo -e "${CRB}[ERR]${C0} Unknown error occured!.."
-  fi
+  >&2 echo -e "${CRB}[ERR]${C0} ${1:-Unknown error occured!..}"
 }
 
 ###=========###
