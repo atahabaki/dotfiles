@@ -90,7 +90,7 @@ mntdir() {
   if [ $# -eq 2 ]; then
     mkdir -p "$1" && sudo mount "$2" "$1"
   else
-    log_err "mntdir "
+    log_err "mntdir <path> <drive>"
 }
 
 #
