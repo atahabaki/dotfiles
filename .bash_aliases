@@ -46,3 +46,22 @@ if [ -e "$(which bat)" ]; then
 elif [ -e "$(which cat)" ]; then
   alias r=cat
 fi
+
+#
+# pacman/apt
+#
+if [ -e "$(which pacman)" ]; then
+  alias pup='sudo pacman -Syu'
+  alias pin='sudo pacman -S'
+  alias pfnd='pacman -Ss'
+  alias pfl='sudo pacman -F'
+  alias pfly='sudo pacman -Fyy'
+  alias pfltr='pacman -Qs'
+  alias prm='sudo pacman -R'
+  alias prmx='sudo pacman -Rns $(pacman -Qtdq)'
+  alias pc='sudo pacman -Sc'
+  alias pcx='sudo pacman -Scc'
+elif [ -e "$(which apt)" ]; then
+  alias pup='sudo apt update && sudo apt dist-upgrade'
+  alias pin='sudo apt install'
+fi
