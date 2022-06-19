@@ -1,6 +1,6 @@
-/**
- * This file is intended for terminal ui...
- */
+#
+# This file is intended for terminal ui...
+#
 
 clear
 echo -e "\033[1;91m
