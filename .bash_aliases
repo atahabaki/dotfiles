@@ -138,6 +138,13 @@ if [ -e "$(which grub-mkconfig)" ]; then
   alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 fi
 
+#
+# mkinitcpio
+#
+if [ -e "$(which mkinitcpio)" ]; then
+  alias relinux='sudo mkinitcpio -P'
+fi
+
 ###===============###
 ##  MISCELLANEOUS  ##
 ###===============###
