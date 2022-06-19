@@ -48,6 +48,12 @@ bindsym XF86AudioPause exec mpc stop
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
 
+# screen brightness/backlight...
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym $mod+Ctrl+Shift+w exec xbacklight -inc 20 # increase screen brightness
+bindsym $mod+Ctrl+Shift+s exec xbacklight -dec 20 # decrease screen brightness
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
