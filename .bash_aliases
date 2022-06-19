@@ -1,6 +1,6 @@
 # To begin with, check whether
 # "which" is installed or not...
-which which
+which which > /dev/null
 if [ $? -eq 0 ]; then
   alias w=which
 else
@@ -13,7 +13,7 @@ fi
 ###================###
 
 # git
-if [ -e "$(which git)" ]; then
+if [ -e "$(which git 2>/dev/null)" ]; then
   alias g.='git init .'
   alias gst='git status'
   alias ga+='git add *'
@@ -31,21 +31,21 @@ fi
 ###================###
 
 # nvim
-if [ -e "$(which nvim)" ]; then
+if [ -e "$(which nvim 2>/dev/null)" ]; then
   alias v=nvim
   alias sv='sudo nvim'
 fi
 
 # helix
-if [ -e "$(which helix)" ]; then
+if [ -e "$(which helix 2>/dev/null)" ]; then
   alias h=helix
   alias sh='sudo helix'
 fi
 
 # vscode/vscodium
-if [ -e "$(which vscodium)" ]; then
+if [ -e "$(which vscodium 2>/dev/null)" ]; then
   alias vc=vscodium
-elif [ -e "$(which code)" ]; then
+elif [ -e "$(which code 2>/dev/null)" ]; then
   alias vc=code
 fi
 
@@ -54,7 +54,7 @@ fi
 ###================###
 
 # pacman/apt
-if [ -e "$(which pacman)" ]; then
+if [ -e "$(which pacman 2>/dev/null)" ]; then
   alias pup='sudo pacman -Syu'
   alias pin='sudo pacman -S'
   alias pfnd='pacman -Ss'
@@ -65,13 +65,13 @@ if [ -e "$(which pacman)" ]; then
   alias prmx='sudo pacman -Rns $(pacman -Qtdq)'
   alias pc='sudo pacman -Sc'
   alias pcx='sudo pacman -Scc'
-elif [ -e "$(which apt)" ]; then
+elif [ -e "$(which apt 2>/dev/null)" ]; then
   alias pup='sudo apt update && sudo apt dist-upgrade'
   alias pin='sudo apt install'
 fi
 
 # yay
-if [ -e "$(which yay)" ]; then
+if [ -e "$(which yay 2>/dev/null)" ]; then
   alias yup='yay -Syu'
   alias yin='yay -S'
   alias yfnd='yay -Ss'
@@ -91,36 +91,36 @@ fi
 alias c=cd
 
 # exa/ls
-if [ -e "$(which exa)" ]; then
+if [ -e "$(which exa 2>/dev/null)" ]; then
   alias l="exa -alih"
   alias sl="sudo exa -alih"
-elif [ -e "$(which ls)" ]; then
+elif [ -e "$(which ls 2>/dev/null)" ]; then
   alias l="exa -alih"
   alias sl="sudo exa -alih"
 fi
 
 # bat/cat
-if [ -e "$(which bat)" ]; then
+if [ -e "$(which bat 2>/dev/null)" ]; then
   alias r=bat
-elif [ -e "$(which cat)" ]; then
+elif [ -e "$(which cat 2>/dev/null)" ]; then
   alias r=cat
 fi
 
 # chmod
-if [ -e "$(which chmod)" ]; then
+if [ -e "$(which chmod 2>/dev/null)" ]; then
   alias mie="chmod +x "
 fi
 
 # clear
-if [ -e "$(which clear)" ]; then
+if [ -e "$(which clear 2>/dev/null)" ]; then
   alias c.=clear
   alias cls=clear
 fi
 
 # rg/grep
-if [ -e "$(which rg)" ]; then
+if [ -e "$(which rg 2>/dev/null)" ]; then
   alias grep=rg
-elif [ -e "$(which grep)" ]; then
+elif [ -e "$(which grep 2>/dev/null)" ]; then
   alias grep='grep --color=auto'
   alias gr=grep
 fi
@@ -130,17 +130,17 @@ fi
 ###===============###
 
 # grub-mkconfig
-if [ -e "$(which grub-mkconfig)" ]; then
+if [ -e "$(which grub-mkconfig 2>/dev/null)" ]; then
   alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 fi
 
 # mkinitcpio
-if [ -e "$(which mkinitcpio)" ]; then
+if [ -e "$(which mkinitcpio 2>/dev/null)" ]; then
   alias relinux='sudo mkinitcpio -P'
 fi
 
 # youtube-dl
-if [ -e "$(which youtube-dl)" ]; then
+if [ -e "$(which youtube-dl 2>/dev/null)" ]; then
   alias ytdl="youtube-dl"
   alias ytdl3="ytdl -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 fi
