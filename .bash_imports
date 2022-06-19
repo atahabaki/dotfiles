@@ -2,5 +2,7 @@
  * This file is intended for exporting ENV variables...
  */
 
-export_check "$ANDROID_SDK_ROOT/platform-tools/"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export EDITOR=/usr/bin/nvim
+
+export_check "$ANDROID_SDK_ROOT/platform-tools/"
