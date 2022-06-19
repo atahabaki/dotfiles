@@ -26,3 +26,12 @@ if [ -e "$(which git)" ]; then
   alias gcln='git clone'
   alias gpl='git pull'
 fi
+
+#
+# exa
+#
+if [ -e "$(which exa)" ]; then
+        alias l="exa -alih"
+        alias sl="sudo exa -alih"
+fi
+
