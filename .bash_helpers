@@ -79,6 +79,7 @@ mntdir() {
     mkdir -p "$1" && sudo mount "$2" "$1"
   else
     log_err "mntdir <path> <drive>"
+  fi
 }
 
 #
