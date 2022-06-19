@@ -81,3 +81,11 @@ if [ -e "$(which yay)" ]; then
   alias yc='yay -Sc'
   alias ycx='yay -Scc'
 fi
+
+#
+# chmod
+#
+if [ -e "$(which chmod)" ]
+then
+  alias mie="chmod +x "
+fi
