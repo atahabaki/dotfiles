@@ -131,6 +131,13 @@ elif [ -e "$(which grep)" ]; then
   alias gr=grep
 fi
 
+#
+# grub-mkconfig
+#
+if [ -e "$(which grub-mkconfig)" ]; then
+  alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+fi
+
 ###===============###
 ##  MISCELLANEOUS  ##
 ###===============###
