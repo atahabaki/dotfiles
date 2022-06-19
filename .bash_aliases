@@ -100,6 +100,14 @@ then
 fi
 
 #
+# helix
+#
+if [ -e "$(which helix)" ]; then
+  alias h=helix
+  alias sh='sudo helix'
+fi
+
+#
 # vscode/vscodium
 #
 if [ -e "$(which vscodium)" ]; then
