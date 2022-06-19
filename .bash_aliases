@@ -89,3 +89,12 @@ if [ -e "$(which chmod)" ]
 then
   alias mie="chmod +x "
 fi
+
+#
+# nvim
+#
+if [ -e "$(which nvim)" ]
+then
+  alias v=nvim
+  alias sv='sudo nvim'
+fi
