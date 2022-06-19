@@ -59,7 +59,7 @@ floating_modifier $mod
 
 # gaps
 gaps inner 8
-gaps outer 0
+gaps outer 4
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
