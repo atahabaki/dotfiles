@@ -28,11 +28,14 @@ if [ -e "$(which git)" ]; then
 fi
 
 #
-# exa
+# exa/ls
 #
 if [ -e "$(which exa)" ]; then
-        alias l="exa -alih"
-        alias sl="sudo exa -alih"
+  alias l="exa -alih"
+  alias sl="sudo exa -alih"
+elif [ -e "$(which ls)" ]; then
+  alias l="exa -alih"
+  alias sl="sudo exa -alih"
 fi
 
 #
