@@ -98,3 +98,12 @@ then
   alias v=nvim
   alias sv='sudo nvim'
 fi
+
+#
+# vscode/vscodium
+#
+if [ -e "$(which vscodium)" ]; then
+  alias vc=vscodium
+elif [ -e "$(which code)" ]; then
+  alias vc=code
+fi
