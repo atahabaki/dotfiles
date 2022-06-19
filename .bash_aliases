@@ -145,6 +145,14 @@ if [ -e "$(which mkinitcpio)" ]; then
   alias relinux='sudo mkinitcpio -P'
 fi
 
+#
+# youtube-dl
+#
+if [ -e "$(which youtube-dl)" ]; then
+  alias ytdl="youtube-dl"
+  alias ytdl3="ytdl -x --audio-format mp3 -o '%(title)s.%(ext)s'"
+fi
+
 ###===============###
 ##  MISCELLANEOUS  ##
 ###===============###
