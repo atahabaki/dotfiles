@@ -127,16 +127,16 @@ bindsym $mod+p move workspace to output right
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1  "  Enjoying"
+set $ws2  "  Surfing"
+set $ws3  "  Flowing"
+set $ws4  "謹  Coding"
+set $ws5  "  Recording"
+set $ws6  "  Thinking!"
+set $ws7  "磊  Watching"
+set $ws8  "  Gaming"
+set $ws9  "  Messaging"
+set $ws10 "  Listening"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -177,10 +177,6 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
