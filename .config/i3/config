@@ -192,6 +192,52 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+client.focused          #2A273F #2A273F #E0DEF4 #2A273F   #2A273F
+client.focused_inactive #232136 #232136 #908CAA #232136   #232136
+client.unfocused        #232136 #232136 #908CAA #232136   #232136
+client.urgent           #EB6F92 #EB6F92 #E0DEF4 #EB6F92   #EB6F92
+client.placeholder      #232136 #232136 #2A273F #232136   #232136
+
+client.background       #2A273F
+
+bar {
+  id bar-main
+  colors {
+    background #232136
+    statusline #E0DEF4
+    separator  #232136
+    focused_workspace  #2A273F #2A273F #E0DEF4
+    active_workspace   #232136 #232136 #908CAA
+    inactive_workspace #232136 #232136 #908CAA
+    urgent_workspace   #EB6F92 #EB6F92 #E0DEF4
+    binding_mode       #EB6F92 #EB6F92 #E0DEF4
+  }
+  status_command i3status
+  output primary
+  tray_output primary
+  tray_padding 1
+  font pango:Iosevka Nerd Font, Fira Code Retina 7.35
+}
+
+bar {
+  id bar-hdmi
+  colors {
+    background #232136
+    statusline #E0DEF4
+    separator  #232136
+    focused_workspace  #2A273F #2A273F #E0DEF4
+    active_workspace   #232136 #232136 #908CAA
+    inactive_workspace #232136 #232136 #908CAA
+    urgent_workspace   #EB6F92 #EB6F92 #E0DEF4
+    binding_mode       #EB6F92 #EB6F92 #E0DEF4
+  }
+  status_command i3status
+  output HDMI1
+  tray_output HDMI1
+  tray_padding 1
+  font pango:Iosevka Nerd Font, Fira Code Retina 7.35
+}
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
