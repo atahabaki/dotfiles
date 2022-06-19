@@ -1,0 +1,14 @@
+/**
+ * This file is intended for global helper bash functions only...
+ */
+
+/**
+ * If the given Path is not exist in PATH env variable
+ * exports it to PATH env var
+ */
+export_check() {
+  case ":${PATH}:" in
+    *:"$1":*) ;;
+    *) export PATH="$1:$PATH";;
+  esac
+}
