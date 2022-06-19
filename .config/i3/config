@@ -57,6 +57,10 @@ bindsym $mod+Ctrl+Shift+s exec xbacklight -dec 20 # decrease screen brightness
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# gaps
+gaps inner 8
+gaps outer 0
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
