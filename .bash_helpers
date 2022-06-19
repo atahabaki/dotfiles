@@ -68,6 +68,19 @@ gacm() {
   fi
 }
 
+#
+#    Deletes branch from remote and local.
+#  @arg0: branch name
+#  @arg1: **optional**, remote name
+#
+gdbr() {
+  if [ $# -le 2 ]; then
+    git push "${2:-origin}" --delete "$1" && git branch -D "$1"
+  else
+    log_err "gdbr <branch name> [remote name]"
+  fi
+}
+
 ###=========###
 ##  OTHERS   ##
 ###=========###
