@@ -53,6 +53,12 @@ log_err() {
 ###=========###
 ##    GIT    ##
 ###=========###
+
+#
+#    Stages files, then commits.
+#  @arg0: commit message
+#  @arg1..: files
+#
 gacm() {
   echo $#
   if [ $# -ge 2 ]; then
@@ -62,7 +68,6 @@ gacm() {
     log_err "gacm <commit message> <[files]>"
   fi
 }
-
 
 ###=========###
 ##  OTHERS   ##
