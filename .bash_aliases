@@ -112,3 +112,11 @@ if [ -e "$(which vscodium)" ]; then
 elif [ -e "$(which code)" ]; then
   alias vc=code
 fi
+
+#
+# clear
+#
+if [ -e "$(which clear)" ]; then
+  alias c.=clear
+  alias cls=clear
+fi
