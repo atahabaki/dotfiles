@@ -1,3 +1,5 @@
 /**
  * This file is intended for exporting ENV variables...
  */
+
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
