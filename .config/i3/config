@@ -266,3 +266,6 @@ for_window [class="discord"] move container to workspace $ws9
 for_window [class="Spotify"] move container to workspace $ws10
 
 for_window [window_role="GtkFileChooserDialog"] fullscreen
+
+# startups...
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.png
