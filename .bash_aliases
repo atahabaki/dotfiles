@@ -1,18 +1,18 @@
-#
-# Assumed Installed...
-#
-
-# check whether "which" is installed or not...
+# To begin with, check whether
+# "which" is installed or not...
 which which
 if [ $? -eq 0 ]; then
   alias w=which
 else
+  echo -e "[ERR] couldn't set aliases"
   exit -1
 fi
 
-#
+###================###
+##     DEVELOPER    ##
+###================###
+
 # git
-#
 if [ -e "$(which git)" ]; then
   alias g.='git init .'
   alias gst='git status'
@@ -26,29 +26,34 @@ if [ -e "$(which git)" ]; then
   alias gpl='git pull'
 fi
 
-#
-# exa/ls
-#
-if [ -e "$(which exa)" ]; then
-  alias l="exa -alih"
-  alias sl="sudo exa -alih"
-elif [ -e "$(which ls)" ]; then
-  alias l="exa -alih"
-  alias sl="sudo exa -alih"
+###================###
+##     EDITORS      ##
+###================###
+
+# nvim
+if [ -e "$(which nvim)" ]; then
+  alias v=nvim
+  alias sv='sudo nvim'
 fi
 
-#
-# bat/cat
-#
-if [ -e "$(which bat)" ]; then
-  alias r=bat
-elif [ -e "$(which cat)" ]; then
-  alias r=cat
+# helix
+if [ -e "$(which helix)" ]; then
+  alias h=helix
+  alias sh='sudo helix'
 fi
 
-#
+# vscode/vscodium
+if [ -e "$(which vscodium)" ]; then
+  alias vc=vscodium
+elif [ -e "$(which code)" ]; then
+  alias vc=code
+fi
+
+###================###
+## PACKAGE MANAGERS ##
+###================###
+
 # pacman/apt
-#
 if [ -e "$(which pacman)" ]; then
   alias pup='sudo pacman -Syu'
   alias pin='sudo pacman -S'
@@ -65,9 +70,7 @@ elif [ -e "$(which apt)" ]; then
   alias pin='sudo apt install'
 fi
 
-#
 # yay
-#
 if [ -e "$(which yay)" ]; then
   alias yup='yay -Syu'
   alias yin='yay -S'
@@ -81,49 +84,40 @@ if [ -e "$(which yay)" ]; then
   alias ycx='yay -Scc'
 fi
 
-#
+###===============###
+##  DEFAULT UTILS  ##
+###===============###
+
+alias c=cd
+
+# exa/ls
+if [ -e "$(which exa)" ]; then
+  alias l="exa -alih"
+  alias sl="sudo exa -alih"
+elif [ -e "$(which ls)" ]; then
+  alias l="exa -alih"
+  alias sl="sudo exa -alih"
+fi
+
+# bat/cat
+if [ -e "$(which bat)" ]; then
+  alias r=bat
+elif [ -e "$(which cat)" ]; then
+  alias r=cat
+fi
+
 # chmod
-#
 if [ -e "$(which chmod)" ]; then
   alias mie="chmod +x "
 fi
 
-#
-# nvim
-#
-if [ -e "$(which nvim)" ]; then
-  alias v=nvim
-  alias sv='sudo nvim'
-fi
-
-#
-# helix
-#
-if [ -e "$(which helix)" ]; then
-  alias h=helix
-  alias sh='sudo helix'
-fi
-
-#
-# vscode/vscodium
-#
-if [ -e "$(which vscodium)" ]; then
-  alias vc=vscodium
-elif [ -e "$(which code)" ]; then
-  alias vc=code
-fi
-
-#
 # clear
-#
 if [ -e "$(which clear)" ]; then
   alias c.=clear
   alias cls=clear
 fi
 
-#
 # rg/grep
-#
 if [ -e "$(which rg)" ]; then
   alias grep=rg
 elif [ -e "$(which grep)" ]; then
@@ -131,29 +125,22 @@ elif [ -e "$(which grep)" ]; then
   alias gr=grep
 fi
 
-#
+###===============###
+##  UNCATEGORIZED  ##
+###===============###
+
 # grub-mkconfig
-#
 if [ -e "$(which grub-mkconfig)" ]; then
   alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 fi
 
-#
 # mkinitcpio
-#
 if [ -e "$(which mkinitcpio)" ]; then
   alias relinux='sudo mkinitcpio -P'
 fi
 
-#
 # youtube-dl
-#
 if [ -e "$(which youtube-dl)" ]; then
   alias ytdl="youtube-dl"
   alias ytdl3="ytdl -x --audio-format mp3 -o '%(title)s.%(ext)s'"
 fi
-
-###===============###
-##  MISCELLANEOUS  ##
-###===============###
-alias c=cd
