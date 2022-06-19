@@ -16,3 +16,5 @@ echo -e "\033[1;91m
                                                     ░
                                    錬金術師
 "
+
+eval "$(starship init bash)"
