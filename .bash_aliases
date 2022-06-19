@@ -4,8 +4,7 @@
 
 # check whether "which" is installed or not...
 which which
-if [ $? -eq 0 ]
-then
+if [ $? -eq 0 ]; then
   alias w=which
 else
   exit -1
@@ -85,16 +84,14 @@ fi
 #
 # chmod
 #
-if [ -e "$(which chmod)" ]
-then
+if [ -e "$(which chmod)" ]; then
   alias mie="chmod +x "
 fi
 
 #
 # nvim
 #
-if [ -e "$(which nvim)" ]
-then
+if [ -e "$(which nvim)" ]; then
   alias v=nvim
   alias sv='sudo nvim'
 fi
