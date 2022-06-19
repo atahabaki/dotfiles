@@ -94,6 +94,22 @@ umntdir() {
   fi
 }
 
+#
+#    Sets fan's speed.
+#  @arg0: fan speed
+#
+flvl() {
+  sudo -- sh -c "echo ${1:-255} > '/sys/devices/platform/asus-nb-wmi/hwmon/$(ls /sys/devices/platform/asus-nb-wmi/hwmon)/pwm1'"
+}
+
+#
+#    Enables/disables fan.
+#  @arg0: 0 for stop, 1 for manuel, 2 for auto
+#
+fctrl() {
+  sudo -- sh -c "echo ${1:-255} > '/sys/devices/platform/asus-nb-wmi/hwmon/$(ls /sys/devices/platform/asus-nb-wmi/hwmon)/pwm1_enable'"
+}
+
 ###=========###
 ##  OTHERS   ##
 ###=========###
