@@ -1,6 +1,58 @@
 #
-# This file is only intended for global helper functions
+# This file is only intended for helper functions
 #
+
+###=========###
+##  COLOURS  ##
+###=========###
+C0='\033[0m'
+CRB='\033[91;1m'
+CGB='\033[92;1m'
+CYB='\033[93;1m'
+
+###=========###
+##  LOGGERS  ##
+###=========###
+
+# 
+#   Logs OK to /dev/stdout.
+# @arg0 msg: <T>: which can be displayed by echo
+#
+log_ok() {
+  if [ $# -eq 1 ]; then
+    echo -e "${CGB}[OK!]${C0} $1"
+  else
+    echo -e "${CGB}[OK!]${C0} Done!.."
+  fi
+}
+
+# 
+#   Logs OK to /dev/stdout.
+# @arg0 msg: <T>: which can be displayed by echo
+#
+log_wrn() {
+  if [ $# -eq 1 ]; then
+    echo -e "${CYB}[WRN]${C0} $1"
+  else
+    echo -e "${CYB}[WRN]${C0} Something interesting happening!.."
+  fi
+}
+
+# 
+#   Logs error to /dev/stderr.
+# @arg0 msg: <T>: which can be displayed by echo
+#
+log_err() {
+  if [ $# -eq 1 ]; then
+    >&2 echo -e "${CRB}[ERR]${C0} $1"
+  else
+    >&2 echo -e "${CRB}[ERR]${C0} Unknown error occured!.."
+  fi
+}
+
+###=========###
+##  OTHERS   ##
+###=========###
 
 #
 #   If the given Path is not exist in PATH env variable
