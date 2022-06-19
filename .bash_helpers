@@ -119,3 +119,15 @@ export_check() {
     *) export PATH="$1:$PATH";;
   esac
 }
+
+#
+#    Create directory, and cd to it.
+#  @arg0: path to create dir, and navigate
+#
+mcdr() {
+  if [ $# -eq 1 ]; then
+    mkdir -p "$1" && cd "$1"
+  else
+    log_err "mcdr <path>"
+  fi
+}
