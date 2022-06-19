@@ -7,3 +7,4 @@
 [[ -f ~/.bash_helpers ]] && . ~/.bash_helpers
 [[ -f ~/.bash_imports ]] && . ~/.bash_imports
 [[ -f ~/.bash_ui ]] && . ~/.bash_ui
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
