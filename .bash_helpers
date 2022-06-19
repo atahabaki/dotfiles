@@ -81,6 +81,30 @@ gdbr() {
   fi
 }
 
+#
+#    Mounts that drive into that folder.
+#  @arg0: mount folder name
+#  @arg1: drive to be mounted
+#
+mntdir() {
+  if [ $# -eq 2 ]; then
+    mkdir -p "$1" && sudo mount "$2" "$1"
+  else
+    log_err "mntdir "
+}
+
+#
+#    Unmounts that drive, and removes mountpoint folder.
+#  @arg0: mount folder name
+#
+umntdir() {
+  if [ $# -eq 1 ]; then 
+    umount -R "$1" && rm -rf "$1"
+  else
+    log_err "umntdir <mount_point>"
+  fi
+}
+
 ###=========###
 ##  OTHERS   ##
 ###=========###
