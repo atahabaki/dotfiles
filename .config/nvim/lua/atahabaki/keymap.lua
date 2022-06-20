@@ -33,3 +33,13 @@ keymap("n", "<leader>bp", ":bprevious<CR>", opts)
 -- stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- move text up and down
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
