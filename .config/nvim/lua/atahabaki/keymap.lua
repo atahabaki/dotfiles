@@ -25,3 +25,7 @@ keymap("n", "<C-Up>", ":resize -1<CR>", opts)
 keymap("n", "<C-Down>", ":resize +1<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -1<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +1<CR>", opts)
+
+-- buffer navigation
+keymap("n", "<leader>bn", ":bnext<CR>", opts)
+keymap("n", "<leader>bp", ":bprevious<CR>", opts)
