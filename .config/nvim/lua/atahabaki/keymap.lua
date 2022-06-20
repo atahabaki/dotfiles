@@ -29,3 +29,7 @@ keymap("n", "<C-Right>", ":vertical resize +1<CR>", opts)
 -- buffer navigation
 keymap("n", "<leader>bn", ":bnext<CR>", opts)
 keymap("n", "<leader>bp", ":bprevious<CR>", opts)
+
+-- stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
