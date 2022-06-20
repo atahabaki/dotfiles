@@ -130,6 +130,11 @@ fi
 ##  UNCATEGORIZED  ##
 ###===============###
 
+# update aliases
+if [ -e "$HOME/.config/bash/bash_aliases" ]; then
+  alias ual='. ~/.config/bash/bash_aliases'
+fi
+
 # grub-mkconfig
 if [ -e "$(which grub-mkconfig 2>/dev/null)" ]; then
   alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
