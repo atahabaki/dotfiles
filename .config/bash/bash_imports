@@ -6,3 +6,4 @@ export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 export EDITOR=/usr/bin/nvim
 
 export_check "$ANDROID_SDK_ROOT/platform-tools/"
+export_check "$HOME/.local/bin/"
