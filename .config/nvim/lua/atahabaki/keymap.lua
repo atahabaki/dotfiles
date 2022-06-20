@@ -8,7 +8,10 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Split navigation
-keymap("n", "<C-h>", "<C-w><C-h>", opts)
+keymap("n", "<leader>h", "<C-w><C-h>", opts)
+keymap("n", "<leader>j", "<C-w><C-j>", opts)
+keymap("n", "<leader>k", "<C-w><C-k>", opts)
+keymap("n", "<leader>l", "<C-w><C-l>", opts)
 -- escape terminal insert mode...
 keymap("t", "<Esc>", "<C-\\><C-n>", topts)
 -- open a terminal to
