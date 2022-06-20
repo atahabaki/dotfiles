@@ -92,10 +92,11 @@ alias c=cd
 
 # exa & ls
 if [ -e "$(which exa 2>/dev/null)" ]; then
-  alias l="exa -alih"
-  alias sl="sudo exa -alih"
+  alias l='exa -alih'
+  alias sl='sudo exa -alih'
+fi
 if [ -e "$(which ls 2>/dev/null)" ]; then
-  alias lh="ls --hyperlink=auto --color=auto"
+  alias lh='ls --hyperlink=auto --color=auto'
 fi
 
 # bat/cat
