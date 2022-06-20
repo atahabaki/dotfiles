@@ -14,3 +14,5 @@ keymap("t", "<Esc>", "<C-\\><C-n>", topts)
 -- open a terminal to
 keymap("n", "<leader>tv", ":vs | term<CR>", opts) -- the right
 keymap("n", "<leader>th", ":split | term<CR>", opts) -- the below
+-- open up the explorer to the right
+keymap("n", "<leader>e", ":Lex 16<CR>", opts)
