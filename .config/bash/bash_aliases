@@ -24,6 +24,7 @@ if [ -e "$(which git 2>/dev/null)" ]; then
   alias gr+='git remote add'
   alias gcln='git clone'
   alias gpl='git pull'
+  alias gn='git switch -c'
 fi
 
 ###================###
