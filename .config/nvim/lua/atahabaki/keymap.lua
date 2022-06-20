@@ -19,3 +19,9 @@ keymap("n", "<leader>th", ":vs | term<CR>", opts) -- the right
 keymap("n", "<leader>tv", ":split | term<CR>", opts) -- the below
 -- open up the explorer to the right
 keymap("n", "<leader>e", ":Lex 16<CR>", opts)
+
+-- Resizing
+keymap("n", "<C-Up>", ":resize -1<CR>", opts)
+keymap("n", "<C-Down>", ":resize +1<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -1<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +1<CR>", opts)
