@@ -1,3 +1,4 @@
 require 'atahabaki.options'
 require 'atahabaki.keymap'
 require 'atahabaki.plugins'
+require 'atahabaki.colorscheme'
