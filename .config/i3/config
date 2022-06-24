@@ -232,8 +232,8 @@ bar {
     binding_mode       #EB6F92 #EB6F92 #E0DEF4
   }
   status_command i3status
-  output HDMI1
-  tray_output HDMI1
+  output HDMI-1
+  tray_output HDMI-1
   tray_padding 1
   font pango:Iosevka Nerd Font, Fira Code Retina 7.35
 }
