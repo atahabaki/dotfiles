@@ -43,6 +43,12 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- let packer manage itself
   use({'rose-pine/neovim', as = 'rose-pine'})
 
+  -- Autocompletition
+  use('hrsh7th/nvim-cmp')
+  use('hrsh7th/cmp-buffer')
+  use('hrsh7th/cmp-path')
+  use('hrsh7th/cmp-cmdline')
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- should be placed below of all plugins
   if PACKER_BOOTSTRAP then
