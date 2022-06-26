@@ -84,6 +84,9 @@ return packer.startup(function(use)
   -- git
   use "lewis6991/gitsigns.nvim"
 
+  -- netrw / file explorer
+  use "kyazdani42/nvim-tree.lua"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- should be placed below of all plugins
   if PACKER_BOOTSTRAP then

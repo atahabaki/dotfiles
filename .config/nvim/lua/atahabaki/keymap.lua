@@ -18,7 +18,7 @@ keymap("t", "<Esc>", "<C-\\><C-n>", topts)
 keymap("n", "<leader>th", ":vs | term<CR>", opts) -- the right
 keymap("n", "<leader>tv", ":split | term<CR>", opts) -- the below
 -- open up the explorer to the right
-keymap("n", "<leader>e", ":Lex 16<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle <CR>", opts)
 
 -- Resizing
 keymap("n", "<C-Up>", ":resize -1<CR>", opts)
