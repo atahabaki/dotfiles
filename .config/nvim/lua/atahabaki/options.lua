@@ -30,7 +30,7 @@ vim.opt.number = true
 -- relative number
 vim.opt.relativenumber = true
 -- always show signs
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "auto"
 
 -- ==:==:==:==
 --   SEARCH
