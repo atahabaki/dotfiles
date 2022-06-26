@@ -68,6 +68,12 @@ return packer.startup(function(use)
   -- Dev icons
   use "kyazdani42/nvim-web-devicons"
 
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate"
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- should be placed below of all plugins
   if PACKER_BOOTSTRAP then
