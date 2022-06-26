@@ -87,6 +87,10 @@ return packer.startup(function(use)
   -- netrw / file explorer
   use "kyazdani42/nvim-tree.lua"
 
+  -- bufferline
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- should be placed below of all plugins
   if PACKER_BOOTSTRAP then
