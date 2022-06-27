@@ -29,15 +29,6 @@ if not status_ok then
   return
 end
 
--- packer: use a popup window
-packer.init {
-  display = {
-    open_fn = function()
-      return require("packer.util").float { border = "rounded" }
-    end,
-  },
-}
-
 -- Plugins
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- let packer manage itself
@@ -93,7 +84,8 @@ return packer.startup(function(use)
 
   -- status line
   use {
-    'nvim-lualine/lualine.nvim',
+    'atahabaki/lualine.nvim',
+    branch = 'rose-pine-theme',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 

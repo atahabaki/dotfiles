@@ -7,6 +7,8 @@ lualine.setup {
   options = {
     theme = 'rose_pine_moon',
     global_status = true,
-    component_separators = ''
+    section_seperators = { right = '', left = '' },
+    -- component_separators = { right = '', left = '' }
+    component_separators = '',
   },
 }
