@@ -20,3 +20,5 @@ else
   -- set colorscheme after options
   vim.cmd('colorscheme rose-pine')
 end
+
+-- for status line, lualine theme...

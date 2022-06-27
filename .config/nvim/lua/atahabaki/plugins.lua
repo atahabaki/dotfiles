@@ -41,7 +41,7 @@ packer.init {
 -- Plugins
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- let packer manage itself
-  use({'rose-pine/neovim', as = 'rose-pine'})
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
   -- Autocompletition
   use('hrsh7th/nvim-cmp')
@@ -62,7 +62,7 @@ return packer.startup(function(use)
   -- Telescope
   use {
     "nvim-telescope/telescope.nvim",
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
   -- Dev icons
@@ -90,6 +90,12 @@ return packer.startup(function(use)
   -- bufferline
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+
+  -- status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- should be placed below of all plugins
