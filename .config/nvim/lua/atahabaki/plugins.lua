@@ -82,6 +82,9 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
 
+  -- notifier
+  use "rcarriga/nvim-notify"
+
   -- status line
   use {
     'atahabaki/lualine.nvim',
