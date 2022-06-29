@@ -3,9 +3,9 @@ local topts = { silent = false }
 local keymap = vim.api.nvim_set_keymap
 
 -- map leader key to space
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+keymap("", ";", "<Nop>", opts)
+vim.g.mapleader = ";"
+vim.g.maplocalleader = ";"
 
 -- Split navigation
 keymap("n", "<leader>h", "<C-w><C-h>", opts)
@@ -49,3 +49,8 @@ keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr
 keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
 keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opts)
+
+
+-- bufferline
+keymap("n", "<S-h>", "<cmd>:BufferLineCyclePrev<CR>", opts)
+keymap("n", "<S-l>", "<cmd>:BufferLineCycleNext<CR>", opts)
