@@ -63,7 +63,7 @@ gacm() {
 #
 gdbr() {
   if [ $# -le 2 ]; then
-    git push "${2:-origin}" --delete "$1" && git branch -D "$1"
+    git push "${2:-gh}" --delete "$1" && git branch -D "$1"
   else
     log_err "gdbr <branch name> [remote name]"
   fi
