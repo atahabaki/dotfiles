@@ -1,0 +1,6 @@
+font:
+  normal:
+    family: Cascadia Code
+  size: 8.0
+import:
+  - ~/.config/alacritty/rose-pine/dist/rose-pine-moon.yml
