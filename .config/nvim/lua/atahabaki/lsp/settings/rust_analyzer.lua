@@ -5,6 +5,9 @@ return {
         importGranularity = "module",
         importPrefix = "self",
       },
+      checkOnSave = {
+        command = "clippy"
+      },
       cargo = {
         buildScripts = {
           enable = true,
