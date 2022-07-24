@@ -6,6 +6,9 @@ return {
         importPrefix = "self",
       },
       cargo = {
+        buildScripts = {
+          enable = true,
+        },
         loadOutDirsFromCheck = true
       },
       procMacro = {
