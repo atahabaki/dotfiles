@@ -49,6 +49,7 @@ return packer.startup(function(use)
   -- LSPs
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- to quickly install any LSP server...
+  use 'simrat39/rust-tools.nvim'
 
   -- Telescope
   use {
