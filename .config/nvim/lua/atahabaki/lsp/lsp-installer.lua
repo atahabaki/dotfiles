@@ -53,6 +53,8 @@ for _, server in pairs(servers) do
           },
       },
       server = {
+        on_attach = require('atahabaki.lsp.handlers').on_attach,
+        capabilities = require('atahabaki.lsp.handlers').capabilities,
         settings = {
           ["rust-analyzer"] = {
             assist = {
