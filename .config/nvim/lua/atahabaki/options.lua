@@ -9,6 +9,8 @@ vim.opt.conceallevel = 0
 vim.opt.showmode = false
 -- show tablines always(2)/never(0) or if tabs.length >= 2 (1)
 vim.opt.showtabline = 2
+-- nvim GUI font and size
+vim.opt.guifont = "Cascadia Code:h8"
 
 -- ==:==:==:==:==:==
 --   FORMATTING
