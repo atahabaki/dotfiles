@@ -20,7 +20,6 @@ if [ -e "$(which git 2>/dev/null)" ]; then
   alias g+='git add '
   alias g-='git diff '
   alias gcm='git commit -m'
-  alias gpush='git push -u'
   alias gr+='git remote add'
   alias gcln='git clone'
   alias gpl='git pull'

@@ -70,6 +70,33 @@ gdbr() {
 }
 
 #
+#    Pushes local commits to remote...
+#  @arg0: **optional**, remote-name (default: gh)
+#  @arg1: **optional**, branch-name (default: dev)
+#
+gpush() {
+  branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
+    branch_name="(unnamed branch)"     # detached HEAD
+  if [ $# -eq 1 ]; then
+    if ! [[ "$branch_name" = "(unnamed branch)" ]]; then
+      branch_name=${branch_name##refs/heads/}
+      if [ "$branch_name" = "$1" ]; then
+        log_wrn "Assuming the remote is gh..."
+        git push -u gh "$1"
+      else
+        log_wrn "Assuming the current branch is dev..."
+        git push -u "$1" dev
+      fi
+    else
+      log_err "Use with the second parameter"
+      log_wrn "Usage: gpush <remote:-gh> <branch:-dev>"
+    fi
+  elif [[ $# -eq 2 ]] || [[ $# -eq 0 ]]; then
+    git push -u "${1:-gh}" "${2:-dev}" && log_ok "gpush done!.."
+  fi
+}
+
+#
 #    Mounts that drive into that folder.
 #  @arg0: mount folder name
 #  @arg1: drive to be mounted
