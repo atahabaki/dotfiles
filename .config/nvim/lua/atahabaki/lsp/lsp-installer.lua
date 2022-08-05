@@ -78,12 +78,7 @@ for _, server in pairs(servers) do
       }
     }
     goto continue
-    -- local rust_analyzer_opts = require("atahabaki.lsp.settings.rust_analyzer")
-    -- opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
   end
-
--- This scfunction is exactly the same as lspconfig's setup function.
--- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 lspconfig[server].setup(opts)
 ::continue::
 end
