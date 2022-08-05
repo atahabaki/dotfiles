@@ -33,6 +33,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 -- always show signs
 vim.opt.signcolumn = "auto"
+-- sets a ruler at 80th and 120th char
+vim.opt.colorcolumn = {80,120}
 
 -- ==:==:==:==
 --   SEARCH
