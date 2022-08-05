@@ -92,6 +92,9 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  -- colourColumn ext.
+  use "xiyaowong/virtcolumn.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- should be placed below of all plugins
   if PACKER_BOOTSTRAP then
