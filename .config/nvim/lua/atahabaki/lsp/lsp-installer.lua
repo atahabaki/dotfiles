@@ -5,6 +5,7 @@ end
 
 local servers = {
   "sumneko_lua",
+  "bashls",
   "dartls",
   "pyright",
   "rust_analyzer",
@@ -39,6 +40,11 @@ for _, server in pairs(servers) do
   if server == "pyright" then
     local pyright_opts = require("atahabaki.lsp.settings.pyright")
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
+
+  if server == "bashls" then
+    local bashls_opts = require("atahabaki.lsp.settings.bashls")
+    opts = vim.tbl_deep_extend("force", bashls_opts, opts)
   end
 
   if server == "rust_analyzer" then
