@@ -27,6 +27,8 @@ if [ -e "$(which git 2>/dev/null)" ]; then
   alias gcln='git clone'
   alias gpl='git pull'
   alias gn='git switch -c'
+  alias glp='git log --date=relative --graph --decorate --all \
+   --pretty=format:"%C(#ea9a97)%h %C(#908caa)%cd %C(#f6c177)[%cn] %C(#c4a7e7)%s%C(#eb6f92)%d%Creset"'
 fi
 
 ###================###
