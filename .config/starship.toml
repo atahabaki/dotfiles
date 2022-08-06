@@ -1,0 +1,89 @@
+format = "[](#DA627D)$username[](bg:#EB6F92 fg:#DA627D)$directory[](fg:#EB6F92 bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust[](fg:#86BBD8 bg:#06969A)$docker_context[](fg:#06969A bg:#33658A)$time[ ](fg:#33658A)"
+
+[c]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[directory]
+format = "[ $path ]($style)"
+style = "italic bg:#EB6F92 fg:#232136"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+Documents = " "
+Downloads = " "
+Music = " "
+Pictures = " "
+
+[docker_context]
+format = "[[ $symbol $context ](bg:#06969A)]($style) $path"
+style = "bg:#06969A"
+symbol = " "
+
+[elixir]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[elm]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[git_branch]
+format = "[[ $symbol $branch ](bg:#FCA17D fg:#232136)]($style)"
+style = "bg:#FCA17D"
+symbol = ""
+
+[git_status]
+format = "[[($all_status$ahead_behind )](bg:#FCA17D fg:#232136)]($style)"
+style = "bg:#FCA17D"
+
+[golang]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[haskell]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[java]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[julia]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[nim]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = " "
+
+[nodejs]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = ""
+
+[rust]
+format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
+style = "bg:#86BBD8"
+symbol = ""
+
+[time]
+disabled = false
+format = "[[ ♥ $time ](bg:#33658A)]($style)"
+style = "bg:#33658A"
+time_format = "%R"
+
+[username]
+format = "[$user ]($style)"
+show_always = true
+style_root = "bold italic bg:#DA627D fg:#232136"
+style_user = "bold italic bg:#DA627D fg:#232136"
