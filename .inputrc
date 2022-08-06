@@ -8,9 +8,6 @@ set show-all-if-ambiguous on
 
 set menu-complete-display-prefix on
 
-# bash, menu complete, 
-\C-TAB: menu-complete
-
 # Working Directory
   # up a dir...
 "\C-u":"cd ..\n"
