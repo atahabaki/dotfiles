@@ -7,4 +7,4 @@
 [[ -f ~/.config/bash/bash_imports ]] && . ~/.config/bash/bash_imports
 [[ -f ~/.config/bash/bash_aliases ]] && . ~/.config/bash/bash_aliases
 [[ -f ~/.config/bash/bash_ui ]] && . ~/.config/bash/bash_ui
-[[ -f ~/.config/bash/zeoxide ]] && . ~/.config/bash/zeoxide
+[[ -f ~/.config/bash/zoxide ]] && . ~/.config/bash/zoxide
