@@ -92,6 +92,7 @@ gpush() {
       log_wrn "Usage: gpush <remote:-gh> <branch:-dev>"
     fi
   elif [[ $# -eq 2 ]] || [[ $# -eq 0 ]]; then
+    log_wrn "Assuming remote is gh and branch is dev."
     git push -u "${1:-gh}" "${2:-dev}" && log_ok "gpush done!.."
   fi
 }
