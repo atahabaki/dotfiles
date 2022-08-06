@@ -1,0 +1,21 @@
+# Colours, man!...
+set colored-stats on
+set colored-completion-prefix on
+
+# Completion stuff...
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+set menu-complete-display-prefix on
+
+# bash, menu complete, 
+\C-TAB: menu-complete
+
+# Working Directory
+  # up a dir...
+"\C-u":"cd ..\n"
+  # go to projects dir
+"\enp":"cd ~/Documents/Projects/\n"
+"\enj":"cd ~/Downloads/\n"
+  # add sudo to the head...
+"\es":"\C-asudo \C-e"
