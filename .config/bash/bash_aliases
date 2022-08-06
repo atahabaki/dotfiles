@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# vim: set filetype=bash : 
+#
 # To begin with, check whether
 # "which" is installed or not...
 which which > /dev/null
