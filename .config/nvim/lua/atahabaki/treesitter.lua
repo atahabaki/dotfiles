@@ -4,14 +4,24 @@ if not status then
 end
 
 configs.setup {
-  ensure_installed = "maintained",
+  ensure_installed = {
+    "bash",
+    "dart",
+    "lua",
+    "html",
+    "markdown",
+    "rust",
+    "toml",
+    "json",
+    "nu"
+  },
+  auto_install = true,
   sync_install = false,
-  ignore_install = { "" }, -- List of parsers to ignore installing
+  ignore_install = {}, -- List of parsers to ignore installing
   highlight = {
     enable = true, -- false will disable the whole extension
-    disable = { "" }, -- list of language that will be disabled
+    disable = {}, -- list of language that will be disabled
     additional_vim_regex_highlighting = false,
-
   },
   indent = { enable = true, disable = { "yaml" } },
 }
