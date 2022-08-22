@@ -1,4 +1,16 @@
-format = "[](#DA627D)$username[](bg:#EB6F92 fg:#DA627D)$directory[](fg:#EB6F92 bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust[](fg:#86BBD8 bg:#06969A)$docker_context[](fg:#06969A bg:#33658A)$time[ ](fg:#33658A)"
+format = "[](#DA627D)$username[](bg:#EB6F92 fg:#DA627D)$directory[](fg:#EB6F92 bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust[](fg:#86BBD8 bg:#06969A)$docker_context[](fg:#06969A bg:#33658A)$battery[](fg:#33658A bg:#4682b4)$time[ ](fg:#4682b4)"
+
+[battery]
+full_symbol = "♥"
+charging_symbol = ""
+discharging_symbol = ""
+unknown_symbol = "ﯜ"
+empty_symbol = ""
+format = "[ $symbol $percentage ]($style)"
+
+[[battery.display]]
+threshold = 60
+style = "bg:#33658A"
 
 [c]
 format = "[[ $symbol ($version) ](bg:#86BBD8 fg:#232136)]($style)"
@@ -78,8 +90,8 @@ symbol = ""
 
 [time]
 disabled = false
-format = "[[ ♥ $time ](bg:#33658A)]($style)"
-style = "bg:#33658A"
+format = "[[ 愈$time ](bg:#4682b4)]($style)"
+style = "bg:#4682b4"
 time_format = "%R"
 
 [username]
