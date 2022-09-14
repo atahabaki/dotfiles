@@ -18,10 +18,10 @@ general {
 #order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
-#order += "battery all"
 #order += "disk /"
 order += "load"
 order += "memory"
+order += "battery _first_"
 order += "volume master"
 order += "tztime local"
 
@@ -33,6 +33,17 @@ volume master {
 ipv6 {
 	format_up = " %ip"
 	format_down = " IPv6"
+}
+
+battery _first_ {
+  status_chr = ""
+  status_full = ""
+  status_bat = ""
+  status_unk = "ﯜ"
+  format = "%status  %percentage %remaining"
+	format_down = " ﱗ"
+  low_threshold = 30
+  threshold_type = percentage
 }
 
 wireless _first_ {
