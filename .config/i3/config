@@ -251,6 +251,7 @@ for_window [class="STM32CubeIDE"] move container to workspace $ws4
 
 for_window [class="Blender"] move container to workspace $ws6
 for_window [class="Inkscape"] move container to workspace $ws6
+for_window [class="obsidian"] move container to workspace $ws6
 
 for_window [class="calibre"] move container to workspace $ws7
 
