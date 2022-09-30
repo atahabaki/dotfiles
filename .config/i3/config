@@ -192,6 +192,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Resize without resize mode.
+bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+
 client.focused          #2A273F #2A273F #E0DEF4 #2A273F   #2A273F
 client.focused_inactive #232136 #232136 #908CAA #232136   #232136
 client.unfocused        #232136 #232136 #908CAA #232136   #232136
