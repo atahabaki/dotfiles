@@ -54,3 +54,4 @@ keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>
 -- bufferline
 keymap("n", "<S-h>", "<cmd>:BufferLineCyclePrev<CR>", opts)
 keymap("n", "<S-l>", "<cmd>:BufferLineCycleNext<CR>", opts)
+keymap("n", "<S-q>", "<cmd>:BufferLinePickClose<CR>", opts)
