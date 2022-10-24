@@ -54,6 +54,11 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym $mod+Ctrl+Shift+w exec xbacklight -inc 20 # increase screen brightness
 bindsym $mod+Ctrl+Shift+s exec xbacklight -dec 20 # decrease screen brightness
 
+bindsym XF86Launch1 exec rog-control-center
+bindsym XF86Launch4 exec asusctl profile -n
+bindsym XF86KbdBrightnessDown exec asusctl -p
+bindsym XF86KbdBrightnessUp exec asusctl -n
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
