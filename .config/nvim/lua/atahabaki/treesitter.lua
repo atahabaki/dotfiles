@@ -13,7 +13,6 @@ configs.setup {
     "rust",
     "toml",
     "json",
-    "nu"
   },
   auto_install = true,
   sync_install = false,
