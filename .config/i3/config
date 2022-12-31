@@ -251,6 +251,10 @@ bar {
   font pango:Iosevka Nerd Font, Fira Code Retina 7.35
 }
 
+# custom bindings
+bindsym $mod+l exec "i3lock -i ~/.config/wallpaper.png"
+bindsym $mod+Shift+l exec "i3lock -c 000000"
+
 # window specific rules...
 for_window [class="Brave-browser-beta"] move container to workspace $ws2
 for_window [class="firefoxdeveloperedition"] move container to workspace $ws2
@@ -286,3 +290,6 @@ exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.png
 exec_always --no-startup-id dunst&
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id picom -b &
+exec_always --no-startup-id nm-applet &
+exec_always --no-startup-id setxkbmap -layout "us" -variant "colemak"
+
